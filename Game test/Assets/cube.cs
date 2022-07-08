@@ -14,20 +14,22 @@ public class cube : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // first message test
-        // Debug.Log("That's first print of this project!");
-        // Debug.LogWarning("That's first warning of this project!");
-        // Debug.LogError("That's first error of this project!");
-
-        // Debug.Log("That's first integer of: " + numberHere +", this project!");
-        // Debug.Log("That's first string: " + stringHere + ", of this project!");
-        // Debug.Log("That's first float: " + floaHere + ", of this project!");
+        // PrintToConsole();
     }
 
     // Update is called once per frame
     void Update()
     {
+        MovingCube();
+        OutOfBounds();
+             
+    }
 
+    public void PrintFromOutSide(){
+        print("I come from platform");
+    }
+
+    private void MovingCube(){
         // first iput buttons
         if(Input.GetKeyDown(KeyCode.UpArrow)){
             myRigidBody.velocity = new Vector2(0f, 10f);
@@ -44,8 +46,10 @@ public class cube : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.RightArrow)){
             myRigidBody.velocity = new Vector2(10f, 0f);
             // print("Right");
-        }
+        }         
+    }
 
+    private void OutOfBounds(){
         //area bounds limits
         if(transform.position.x > 10){
             print("Out of bounds!");
@@ -55,6 +59,17 @@ public class cube : MonoBehaviour
         }
         if(transform.position.y > 4.5){
             print("Out of bounds!");
-        }                
+        }          
+    }
+
+    private void PrintToConsole(int numberHere, string stringHere, float floaHere){
+        //first message test
+        Debug.Log("That's first print of this project!");
+        Debug.LogWarning("That's first warning of this project!");
+        Debug.LogError("That's first error of this project!");
+
+        Debug.Log("That's first integer of: " + numberHere +", this project!");
+        Debug.Log("That's first string: " + stringHere + ", of this project!");
+        Debug.Log("That's first float: " + floaHere + ", of this project!");        
     }
 }
