@@ -45,6 +45,16 @@ public class cube : MonoBehaviour
             myRigidBody.velocity = new Vector2(10f, 0f);
             // print("Right");
         }
-        
+
+        //area bounds limits
+        if(transform.position.x > 10){
+            print("Out of bounds!");
+        }
+        if(transform.position.x < -10){
+            print("Out of bounds!");
+        }
+        if(transform.position.y > 4.5){
+            print("Out of bounds!");
+        }                
     }
 }
