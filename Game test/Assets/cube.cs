@@ -22,6 +22,18 @@ public class cube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.UpArrow)){
+            print("up");
+        }
+        if(Input.GetKeyDown(KeyCode.DownArrow)){
+            print("Down");
+        }
+        if(Input.GetKeyDown(KeyCode.LeftArrow)){
+            print("Lefth");
+        }
+        if(Input.GetKeyDown(KeyCode.RightArrow)){
+            print("Right");
+        }
         
     }
 }
