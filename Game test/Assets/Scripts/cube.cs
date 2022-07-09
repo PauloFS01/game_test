@@ -25,8 +25,8 @@ public class cube : MonoBehaviour
              
     }
 
-    public void PrintFromOutSide(){
-        print("I come from platform");
+    public string PrintFromOutSide(){
+        return "This is the real life ?";
     }
 
     private void MovingCube(){
